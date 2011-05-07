@@ -53,6 +53,9 @@ while [ true ]; do
 	
 	
 # usa o scrot
+# você pode também diminuir a qualidade da imagem para que ela não ocupe tanto espaço
+# com o comando scrot -q 75 
+# isso deixara a imagem com 75% da qualidade original
 	scrot $file;
 
 # Espera por 15 segundos pra executar novamente 
