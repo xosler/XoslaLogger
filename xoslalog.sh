@@ -19,6 +19,8 @@ while [ true ]; do
 	imagens="imagens"
 		
 	pasta="logs"
+# você pode salvar também sem seu home se quiser
+# salvei aqui apenas como exemplo sei lá
 	home="/root"	
 	
 	diretorio=$home/$pasta/$ano/$mes/$dia/$imagens	
