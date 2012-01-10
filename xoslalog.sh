@@ -7,11 +7,10 @@
 # salvara em uma pasta /root/logs/ano/mes/dia/imagens
 
 
-#laço pra ficar executando sempre
 while [ true ]; do
 
 #cria a estrutura de pastas no esquema
-# /root/logs/ano/mes/dia/imagens
+# /ano/mes/dia/imagens
 	
 	ano=`date '+%y'`
 	mes=`date '+%m'`
@@ -19,7 +18,7 @@ while [ true ]; do
 	imagens="imagens"
 		
 	pasta="logs"
-# você pode salvar também sem seu home se quiser
+
 # salvei aqui apenas como exemplo sei lá
 	home="/root"	
 	
@@ -29,8 +28,6 @@ while [ true ]; do
 	if [ ! -e $diretorio ]; then
 		mkdir -p  $diretorio
 	fi
-		
-# até aqui é os esquemas de criar pastas
 	
 	
 # Nome do seu screenshot
