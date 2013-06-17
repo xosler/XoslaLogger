@@ -19,23 +19,23 @@ while [ true ]; do
 		
 	pasta="logs"
 
-# salvei aqui apenas como exemplo sei lá
+# salvo nesta pasta apeas como exemplo
 	home="/root"	
 	
 	diretorio=$home/$pasta/$ano/$mes/$dia/$imagens	
 
-# se esse diretório ainda não existe, ele cria.
+# criação do diretório se ele não existir
 	if [ ! -e $diretorio ]; then
 		mkdir -p  $diretorio
 	fi
 	
 	
-# Nome do seu screenshot
+# Nome do screenshot
 	screenshot="screenshot";
 
 
-#pega a quantidade de arquivos na pasta, para sempre criar uma imagem com 
-#um sequencial, para ordenar e não repetir as imagens,
+#pega a quantidade de arquivos na pasta, para criar uma imagem com 
+#um sequencial
 	quantidade=`ls $diretorio | wc -l`;
 	cont=$((quantidade+=1))
 
@@ -49,14 +49,14 @@ while [ true ]; do
 	echo $file
 	
 	
-# usa o scrot
+
 # você pode também diminuir a qualidade da imagem para que ela não ocupe tanto espaço
 # com o comando scrot -q 75 
 # isso deixara a imagem com 75% da qualidade original
 	scrot $file;
 
 # Espera por 15 segundos pra executar novamente 
-# se quiser mais ou menos imagens por minuto, altere aqui :D
+# se quiser mais ou menos imagens por minuto é só alterar aqui
 	sleep 15;
 	
 done
